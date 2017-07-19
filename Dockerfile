@@ -11,7 +11,6 @@ RUN apt-get -q update && \
       git \
       g++ \
       libsqlite3-dev \
-      nodejs \
       sqlite3 \
       supervisor \
       tree \
@@ -19,6 +18,12 @@ RUN apt-get -q update && \
       wget \
       zlib1g-dev \
       zip && \
+    echo "Install NodeJS" && \
+    curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
+    apt-get install -y nodejs && \
+    echo "Install latest NPM and Yarn" && \
+    npm install npm@latest -g && \
+    npm install -g yarn && \
     echo "Install Caddy" && \
     cd /tmp && \
     wget -q https://github.com/mholt/caddy/releases/download/v0.8.3/caddy_linux_amd64.tar.gz && \
