@@ -2,6 +2,10 @@
 
 ## Next
 
+## 0.3.0
+
+- Feature: Installed Bundler, MySQL and Postgres client libraries
+
 ## 0.2.0
 
 - Feature: Installed NodeJS 6 and Yarn
